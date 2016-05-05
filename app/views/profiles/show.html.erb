@@ -2,3 +2,5 @@
 
 <%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-primary" %>
 <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn btn-danger" %>
+
+<%= current_user.distance_to(@user).round(2) %>
