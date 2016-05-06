@@ -1,3 +1,13 @@
-<h1>Products#show</h1>
+<h1>Products</h1>
 
-<%= @product.name %>
+<div class="jumbotron">
+  <div class="panel panel-heading">
+    <h1><strong><%= @product.name %></strong></h1><br />
+    <h3>Price: <%= @product.price %></h3>
+  </div>
+  <div class="panel panel-body">
+    <p>Description:</p><h5> <%= @product.description %></h5><br />
+    <p>Quantity: <%= @product.quantity %></p>
+    <p>Location: <%= @product.address %></p>
+  </div>
+</div>

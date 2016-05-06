@@ -1,6 +1,17 @@
-<h1>Products#index</h1>
+<h1>Products</h1>
 
-<% @products.each do |product| %>
-<%= product.name %>
-<%= product.distance_to(current_user) %>
-<% end %>
+<%= link_to "New Listing", new_product_path, class: "btn btn-primary" %>
+
+<br />
+<div class="row">
+  <% @product.each do |product| %>
+    <div class="col-md-4">
+      <div class="panel panel-body">
+        <h1><%= link_to product.name, product %></h1>
+        <p>Pice: <%= product.price %></p>
+        <p>Description: <%= product.description %></p>
+        <p>Distance: <%= product.distance_to(current_user).round(2) %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
