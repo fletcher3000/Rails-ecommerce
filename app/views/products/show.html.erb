@@ -9,5 +9,10 @@
     <p>Description:</p><h5> <%= @product.description %></h5><br />
     <p>Quantity: <%= @product.quantity %></p>
     <p>Location: <%= @product.address %></p>
+    <% if @product.avatar_file_name != nil %>
+    <%= image_tag @product.avatar.url(:medium), class: "img-responsive" %>
+   <% end %>
   </div>
 </div>
+
+<%= link_to "Back", products_path, class: "btn btn-primary" %>

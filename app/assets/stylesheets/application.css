@@ -6,3 +6,11 @@
  .container {
    background: rgba(255, 255, 255, 0.7);
  }
+
+.cant-see-me {
+  display: none;
+}
+
+.btn {
+  margin: 10px;
+}
