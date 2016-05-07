@@ -1,6 +1,12 @@
 <h1><%= @user.username %>'s Profile</h1>
 
+<% if @user.avatar_file_name != nil %>
+   <%= image_tag @user.avatar.url(:medium), class: "img-responsive" %>
+<% end %>
+<br />
+<p>Distance from User: <%= current_user.distance_to(@user).round(2) %></p>
+<br />
+
+
 <%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-primary" %>
 <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn btn-danger" %>
-
-<%= current_user.distance_to(@user).round(2) %>
