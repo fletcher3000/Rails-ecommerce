@@ -3,8 +3,8 @@ class ProfilesController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  private
-  def user_params
-    params.require(:user).permit(:email, :name, :username, :birthday, :bio, :avatar)
-  end
+  # private
+  # def user_params
+  #   params.require(:user).permit(:email, :name, :username, :birthday, :bio, :latitude, :longitude, :user_id, :avatar)
+  # end
 end
