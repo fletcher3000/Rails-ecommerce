@@ -14,5 +14,11 @@
    <% end %>
   </div>
 </div>
+<div id="map-canvas"></div>
+<%= javascript_tag do %>
+  latitude = '<%= j @product.latitude.to_s %>';
+  longitude = '<%= j @product.longitude.to_s %>';
+  title = '<%= j @product.name %>'
+<% end %>
 
 <%= link_to "Back", products_path, class: "btn btn-primary" %>
